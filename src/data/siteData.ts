@@ -10,7 +10,7 @@ export const personalInfo = {
   email: "avan.sahu0987@gmail.com",
   tagline: "Full-Stack Developer · Competitive Programmer · Open-Source Contributor",
   location: "Gwalior, Madhya Pradesh, India",
-  resumeUrl: "#", // Replace with actual resume link
+  resumeUrl: "https://drive.google.com/file/d/1Z3pxO4jVqJGaFd_bQ0xKDI4Qnh7r6ief/view?usp=sharing", // Replace with actual resume link
   socials: {
     github: "https://github.com/Avan14",
     linkedin: "https://www.linkedin.com/in/avan-sahu-541710296/",
