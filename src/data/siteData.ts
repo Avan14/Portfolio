@@ -13,9 +13,9 @@ export const personalInfo = {
   resumeUrl: "#", // Replace with actual resume link
   socials: {
     github: "https://github.com/Avan14",
-    linkedin: "https://linkedin.com/in/avan-sahu",
-    leetcode: "https://leetcode.com/u/avan-sahu",
-    codeforces: "https://codeforces.com/profile/avan-sahu",
+    linkedin: "https://www.linkedin.com/in/avan-sahu-541710296/",
+    leetcode: "https://leetcode.com/u/Awaann/",
+    codeforces: "https://codeforces.com/profile/Awaann",
   },
   education: {
     institution: "IIIT Gwalior",
@@ -23,34 +23,34 @@ export const personalInfo = {
     gpa: "8.35 / 10",
   },
   aboutParagraph:
-    "I'm a B.Tech + M.Tech student at IIIT Gwalior (GPA 8.35/10) with a passion for building performant, production-grade web applications and pushing the limits of algorithmic problem-solving. From crafting cross-platform desktop apps with Tauri and React to engineering AI-powered developer tools, I thrive at the intersection of systems thinking and user experience.",
+    "I'm a student at IIIT Gwalior with a passion for building performant, production-grade web applications and pushing the limits of algorithmic problem-solving. From crafting cross-platform desktop apps with Tauri and React to engineering AI-powered developer tools, I thrive at the intersection of systems thinking and user experience.",
 };
 
 // ── Skills ─────────────────────────────────────────────────────
 export const skills: { category: string; items: string[] }[] = [
   {
     category: "Languages & Core",
-    items: ["C++", "TypeScript", "Python", "SQL", "Bash"],
+    items: ["C++", "TypeScript", "Python", "SQL", "Bash", "C", "JavaScript"],
   },
   {
     category: "Frontend Tech",
-    items: ["React.js", "Next.js 14", "Tailwind CSS", "Framer Motion"],
+    items: ["React.js", "Next.js 14", "Tailwind CSS", "Framer Motion", "HTML", "CSS", "redux-toolkit"],
   },
   {
     category: "Backend & Infra",
-    items: ["Node.js", "Express.js", "REST APIs", "WebSockets", "Django"],
+    items: ["Node.js", "Express.js", "REST APIs", "WebSockets", "Django", "FastAPI", "NestJS", "GraphQL"],
   },
   {
     category: "Databases",
-    items: ["PostgreSQL", "MongoDB", "NeonDB", "MySQL"],
+    items: ["PostgreSQL", "MongoDB", "NeonDB", "MySQL", "Firebase", "Supabase", "Redis"],
   },
   {
     category: "DevOps & Tools",
-    items: ["Git", "Docker", "Postman", "VS Code", "Linux CLI"],
+    items: ["Git", "Docker", "Postman", "VS Code", "Linux CLI", "Github Actions", "Gitlab CI/CD"],
   },
   {
     category: "AI & Cloud",
-    items: ["OpenAI API", "Claude API", "Vercel", "Render", "Google Cloud"],
+    items: ["OpenAI API", "Claude API", "Vercel", "Render", "Google Cloud", "AWS", "Azure"],
   },
 ];
 
@@ -80,8 +80,8 @@ export const projects: Project[] = [
       "Retry logic and idempotent execution for reliability",
       "OAuth authentication with GitHub and Twitter",
     ],
-    liveUrl: "#",
-    githubUrl: "https://github.com/Avan14",
+    liveUrl: "https://git-x-flow-kyys-git-sprintjan-awaanns-projects.vercel.app/",
+    githubUrl: "https://github.com/Avan14/Blazzic_v0",
   },
   {
     name: "CODEPULSE",
@@ -96,9 +96,25 @@ export const projects: Project[] = [
       "OpenAI integration for real-time debugging",
       "Clerk-backed secure session management",
     ],
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://remote-code-editor.vercel.app/",
+    githubUrl: "https://github.com/Avan14/RemoteCodeEditor",
   },
+  {
+    name: "CRPTED",
+    index: "01",
+    label: "Crypto Market Dashboard",
+    tagline:
+      "Real-time cryptocurrency analytics platform with interactive market insights.",
+    stack: ["React.js", "Node.js", "Express", "MongoDB", "REST API", "CoinGecko API", "Tailwind CSS"],
+    highlights: [
+      "Real-time cryptocurrency market tracking with price, volume, and trend analytics for 100+ digital assets.",
+      "Interactive charts and historical market data visualization using CoinGecko API.",
+      "Full-stack architecture with React frontend and Express backend for scalable data handling.",
+      "Secure data storage and user interactions powered by MongoDB and RESTful APIs.",
+    ],
+    liveUrl: "",
+    githubUrl: "https://github.com/Avan14/CRPTED",
+  }
 ];
 
 // ── Experience ─────────────────────────────────────────────────
@@ -168,7 +184,7 @@ export const achievements: Achievement[] = [
     platform: "Codeforces",
     title: "Specialist",
     badge: "Specialist",
-    rating: "Max Rating: 1518",
+    rating: "Max Rating: 1560",
     stat: "500+ Problems Solved",
     progressPercent: 60,
     color: "accent-purple",
@@ -190,6 +206,13 @@ export const achievements: Achievement[] = [
     color: "accent-coral",
     size: "normal",
   },
+  {
+    platform : "Hacktober-fest",
+    title: "Selected Contributor",
+    stat: "Selected Contributor (2024)",
+    color: "accent-coral",
+    size: "normal",
+  }
 ];
 
 // ── Positions of Responsibility ────────────────────────────────
