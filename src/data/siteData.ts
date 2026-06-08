@@ -20,10 +20,10 @@ export const personalInfo = {
   education: {
     institution: "IIIT Gwalior",
     degree: "Integrated B.Tech + M.Tech",
-    gpa: "8.35 / 10",
+    gpa: "8.43 / 10",
   },
   aboutParagraph:
-    "I'm a student at IIIT Gwalior with a passion for building performant, production-grade web applications and pushing the limits of algorithmic problem-solving. From crafting cross-platform desktop apps with Tauri and React to engineering AI-powered developer tools, I thrive at the intersection of systems thinking and user experience.",
+    "I'm a student at IIIT Gwalior with a passion for building performant, production-grade web applications and pushing the limits of algorithmic problem-solving. From crafting cross-platform desktop apps to engineering AI-powered developer tools, I thrive at the intersection of systems thinking and user experience.",
 };
 
 // ── Skills ─────────────────────────────────────────────────────
@@ -64,6 +64,7 @@ export interface Project {
   highlights: string[];
   liveUrl: string;
   githubUrl: string;
+  imageUrl?: string;
 }
 
 export const projects: Project[] = [
@@ -82,6 +83,7 @@ export const projects: Project[] = [
     ],
     liveUrl: "https://git-x-flow-kyys-git-sprintjan-awaanns-projects.vercel.app/",
     githubUrl: "https://github.com/Avan14/Blazzic_v0",
+    imageUrl: "/blazzic.png", // Replace with actual image in public folder
   },
   {
     name: "CODEPULSE",
@@ -98,6 +100,7 @@ export const projects: Project[] = [
     ],
     liveUrl: "https://remote-code-editor.vercel.app/",
     githubUrl: "https://github.com/Avan14/RemoteCodeEditor",
+    imageUrl: "/codepulse.png", // Replace with actual image in public folder
   },
   {
     name: "CRPTED",
@@ -114,6 +117,7 @@ export const projects: Project[] = [
     ],
     liveUrl: "",
     githubUrl: "https://github.com/Avan14/CRPTED",
+    imageUrl: "/", // Replace with actual image in public folder
   }
 ];
 
@@ -174,18 +178,18 @@ export const achievements: Achievement[] = [
     platform: "LeetCode",
     title: "Knight",
     badge: "Knight",
-    rating: "Rating: 1930",
-    stat: "830+ Problems Solved",
+    rating: "Rating: 1970",
+    stat: "1000+ Problems Solved",
     progressPercent: 85,
     color: "accent-teal",
     size: "normal",
   },
   {
     platform: "Codeforces",
-    title: "Specialist",
-    badge: "Specialist",
-    rating: "Max Rating: 1560",
-    stat: "500+ Problems Solved",
+    title: "Expert",
+    badge: "Expert",
+    rating: "Rating: 1625",
+    stat: "600+ Problems Solved",
     progressPercent: 60,
     color: "accent-purple",
     size: "normal",
@@ -237,12 +241,72 @@ export const positions: Position[] = [
   },
 ];
 
+// ── Competitive Coding ─────────────────────────────────────────
+export interface CodingProfile {
+  platform: string;
+  username: string;
+  rating: number;
+  title: string;
+  profileUrl: string;
+  problemsSolved: {
+    total: number;
+    easy?: number;
+    medium?: number;
+    hard?: number;
+  };
+  stats: {
+    label: string;
+    value: string | number;
+  }[];
+}
+
+export const codingProfiles: CodingProfile[] = [
+  {
+    platform: "LeetCode",
+    username: "Awaann",
+    rating: 1937,
+    title: "Knight",
+    profileUrl: "https://leetcode.com/u/Awaann/",
+    problemsSolved: {
+      total: 942,
+      easy: 208,
+      medium: 560,
+      hard: 174,
+    },
+    stats: [
+      { label: "Top Percentile", value: "3.57%" },
+      { label: "Contests Attended", value: 35 },
+      { label: "Active Days", value: 338 },
+      { label: "Max Streak", value: "91 Days" },
+      { label: "Submissions (1yr)", value: 969 },
+    ],
+  },
+  {
+    platform: "Codeforces",
+    username: "Awaann",
+    rating: 1611,
+    title: "Expert",
+    profileUrl: "https://codeforces.com/profile/Awaann",
+    problemsSolved: {
+      total: 551,
+    },
+    stats: [
+      { label: "Max Rating", value: "1625" },
+      { label: "Solved (1yr)", value: 217 },
+      { label: "Solved (1mo)", value: 37 },
+      { label: "Max Streak", value: "10 Days" },
+      { label: "Friends", value: 50 },
+    ],
+  },
+];
+
 // ── Nav Sections ───────────────────────────────────────────────
 export const navSections = [
   { id: "home", label: "Home", number: "01" },
   { id: "about", label: "About", number: "02" },
   { id: "projects", label: "Projects", number: "03" },
   { id: "experience", label: "Experience", number: "04" },
-  { id: "achievements", label: "Achievements", number: "05" },
-  { id: "contact", label: "Contact", number: "06" },
+  { id: "coding", label: "Coding", number: "05" },
+  { id: "achievements", label: "Achievements", number: "06" },
+  { id: "contact", label: "Contact", number: "07" },
 ];

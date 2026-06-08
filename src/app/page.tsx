@@ -6,7 +6,7 @@ import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Achievements from "@/components/Achievements";
-import Positions from "@/components/Positions";
+import CompetitiveCoding from "@/components/CompetitiveCoding";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -18,8 +18,7 @@ export default function Home() {
       <About />
       <Projects />
       <Experience />
-      <Achievements />
-      <Positions />
+      <CompetitiveCoding />
       <Contact />
     </main>
   );

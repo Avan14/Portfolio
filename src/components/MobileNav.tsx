@@ -7,6 +7,7 @@ const mobileLinks = [
   { id: "about", label: "About", desc: "My background and core skills." },
   { id: "projects", label: "Projects", desc: "Visual showcase of my work." },
   { id: "experience", label: "Experience", desc: "Professional timeline." },
+  { id: "coding", label: "Coding", desc: "Competitive programming stats." },
   { id: "contact", label: "Contact", desc: "Let's get in touch." },
 ];
 

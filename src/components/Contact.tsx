@@ -2,88 +2,76 @@ import { personalInfo } from "@/data/siteData";
 
 export default function Contact() {
   return (
-    <section
+    <footer
       id="contact"
-      className="py-32 px-6 lg:px-24 bg-bg-accent-wash/30 border-t border-accent-purple/10"
+      className="bg-white pt-24 pb-8 border-t-4 border-black px-4 md:px-8"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        {/* Big Heading */}
-        <div className="reveal-on-scroll">
-          <h2 className="font-display font-bold text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] tracking-tighter uppercase text-text-primary">
-            LET&apos;S BUILD SOMETHING GREAT
-            <span className="text-accent-teal">·</span>
-          </h2>
-        </div>
+      <div className="max-w-[1400px] mx-auto flex flex-col items-center text-center">
 
-        {/* Form + Links */}
-        <div className="space-y-12 reveal-on-scroll">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <a className="group block" href={`mailto:${personalInfo.email}`}>
-              <p className="font-mono text-[10px] text-accent-purple uppercase tracking-widest mb-2">
-                Email
-              </p>
-              <p className="text-xl font-display group-hover:text-accent-teal transition-colors text-text-primary">
-                {personalInfo.email}
-              </p>
-            </a>
-            <a className="group block" href={`tel:${personalInfo.phone}`}>
-              <p className="font-mono text-[10px] text-accent-purple uppercase tracking-widest mb-2">
-                Phone
-              </p>
-              <p className="text-xl font-display group-hover:text-accent-teal transition-colors text-text-primary">
-                {personalInfo.phone}
-              </p>
+        {/* ── Giant Orange CTA Block ─────────────────────────── */}
+        <div className="flex flex-col items-center justify-center w-full mb-16 relative bg-brand-orange border-4 border-black p-12 md:p-24 brutalist-shadow-xl">
+          {/* Decorative rotated emoji */}
+          <h2
+            className="text-5xl md:text-[8rem] font-black uppercase leading-none tracking-tighter flex flex-col items-center text-black"
+            style={{ textShadow: "4px 4px 0px #fff" }}
+          >
+            <span className="flex items-center gap-4 flex-wrap justify-center">
+              INTERESTED IN{" "}
+              <span className="text-7xl md:text-[9rem] transform rotate-12 inline-block drop-shadow-[8px_8px_0_rgba(0,0,0,1)]">
+                ✌️
+              </span>
+            </span>
+            <span>WORKING TOGETHER?</span>
+          </h2>
+
+          {/* White email card */}
+          <div className="mt-16 flex flex-col items-center gap-6 bg-white border-4 border-black p-10 md:p-16 brutalist-shadow-xl hover:translate-x-1 hover:-translate-y-1 transition-none">
+            <p className="text-xl font-black uppercase tracking-widest text-brand-purple">
+              Contact me:
+            </p>
+            <a
+              className="text-2xl md:text-5xl font-black hover:text-brand-orange transition-none relative group uppercase"
+              href={`mailto:${personalInfo.email}`}
+            >
+              {personalInfo.email}
+              <span className="absolute -right-12 top-0 text-4xl transform rotate-[-45deg] group-hover:translate-x-4 transition-none">
+                ↗
+              </span>
             </a>
           </div>
+        </div>
 
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input
-                className="bg-transparent border border-accent-purple/15 p-4 font-mono text-xs focus:border-accent-purple focus:ring-0 transition-all text-text-primary placeholder:text-text-muted rounded"
-                placeholder="NAME"
-                type="text"
-              />
-              <input
-                className="bg-transparent border border-accent-purple/15 p-4 font-mono text-xs focus:border-accent-purple focus:ring-0 transition-all text-text-primary placeholder:text-text-muted rounded"
-                placeholder="EMAIL"
-                type="email"
-              />
-            </div>
-            <textarea
-              className="w-full bg-transparent border border-accent-purple/15 p-4 font-mono text-xs focus:border-accent-purple focus:ring-0 transition-all text-text-primary placeholder:text-text-muted rounded"
-              placeholder="MESSAGE"
-              rows={4}
-            />
-            <button
-              type="submit"
-              className="w-full bg-accent-purple text-white py-4 font-display font-bold uppercase tracking-[0.2em] text-xs hatch-hover transition-all rounded"
-            >
-              Send Message
-            </button>
-          </form>
+        {/* ── Footer Bottom Bar ─────────────────────────────── */}
+        <div className="w-full flex flex-col md:flex-row justify-between items-center border-t-4 border-black text-sm font-black text-black uppercase tracking-widest gap-6 mt-8 pt-12">
+          <p className="text-left">
+            Designed &amp; Built
+            <br />
+            by {personalInfo.name}
+          </p>
 
-          <div className="flex gap-8 pt-6">
-            <a
-              href={personalInfo.socials.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              className="font-mono text-[10px] hover:text-accent-teal transition-all text-text-muted"
-            >
-              LINKEDIN
-            </a>
+          {/* Social links */}
+          <div className="flex gap-4 flex-wrap justify-center">
             <a
               href={personalInfo.socials.github}
               target="_blank"
               rel="noreferrer"
-              className="font-mono text-[10px] hover:text-accent-teal transition-all text-text-muted"
+              className="px-6 py-3 border-4 border-black bg-white hover:bg-brand-orange transition-none brutalist-shadow hover:translate-x-1 hover:-translate-y-1"
             >
               GITHUB
+            </a>
+            <a
+              href={personalInfo.socials.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="px-6 py-3 border-4 border-black bg-white hover:bg-brand-purple hover:text-white transition-none brutalist-shadow hover:translate-x-1 hover:-translate-y-1"
+            >
+              LINKEDIN
             </a>
             <a
               href={personalInfo.socials.leetcode}
               target="_blank"
               rel="noreferrer"
-              className="font-mono text-[10px] hover:text-accent-teal transition-all text-text-muted"
+              className="px-6 py-3 border-4 border-black bg-white hover:bg-black hover:text-white transition-none brutalist-shadow hover:translate-x-1 hover:-translate-y-1"
             >
               LEETCODE
             </a>
@@ -91,20 +79,24 @@ export default function Contact() {
               href={personalInfo.socials.codeforces}
               target="_blank"
               rel="noreferrer"
-              className="font-mono text-[10px] hover:text-accent-teal transition-all text-text-muted"
+              className="px-6 py-3 border-4 border-black bg-white hover:bg-brand-orange transition-none brutalist-shadow hover:translate-x-1 hover:-translate-y-1"
             >
               CODEFORCES
             </a>
           </div>
+
+          <p className="text-right">
+            © 2026 — All Rights Reserved
+            <br />
+            <a
+              href="#home"
+              className="hover:text-brand-orange hover:bg-black hover:px-2 transition-none border-b-4 border-black"
+            >
+              Back to top ↗
+            </a>
+          </p>
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="mt-32 pt-8 border-t border-accent-purple/10 text-center">
-        <p className="font-mono text-[10px] text-text-muted opacity-50 uppercase tracking-widest">
-          © 2026 {personalInfo.name} · Built with passion &amp; caffeine
-        </p>
-      </footer>
-    </section>
+    </footer>
   );
 }
