@@ -1,11 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { personalInfo, skills } from "@/data/siteData";
 
 export default function Hero() {
   const [isToggled, setIsToggled] = useState(false);
   const marqueeItems = skills.flatMap((s) => s.items);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsToggled((prev) => !prev);
+    }, 4500);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section id="home" className="pt-16 md:pt-[73px] overflow-x-hidden">
