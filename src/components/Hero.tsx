@@ -8,10 +8,11 @@ export default function Hero() {
   const marqueeItems = skills.flatMap((s) => s.items);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setInterval(() => {
       setIsToggled((prev) => !prev);
-    }, 4500);
-    return () => clearTimeout(timer);
+    }, 3000);
+    
+    return () => clearInterval(timer);
   }, []);
 
   return (
