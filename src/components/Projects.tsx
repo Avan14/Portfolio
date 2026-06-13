@@ -45,8 +45,8 @@ export default function Projects() {
                       <div className="w-3 h-3 rounded-full bg-yellow-500 border-2 border-black" />
                       <div className="w-3 h-3 rounded-full bg-green-500 border-2 border-black" />
                     </div>
-                    <h3 className="font-black text-2xl md:text-5xl text-black uppercase opacity-20">
-                      {p1.name}
+                    <h3 className="font-black text-2xl md:text-5xl text-black uppercase opacity-20 text-center whitespace-pre-line">
+                      {p1.imageFallbackText || p1.name}
                     </h3>
                   </div>
                 )}
@@ -132,8 +132,8 @@ export default function Projects() {
                     />
                   ) : (
                     <div className="bg-white border-4 border-black w-full max-w-sm brutalist-shadow p-4">
-                      <div className="w-full h-40 border-4 border-black bg-gray-200 mb-4 flex items-center justify-center font-black uppercase text-xl text-black">
-                        {p.name}
+                      <div className="w-full h-40 border-4 border-black bg-gray-200 mb-4 flex items-center justify-center font-black uppercase text-xl text-black text-center whitespace-pre-line p-2">
+                        {p.imageFallbackText || p.name}
                       </div>
                     </div>
                   )}

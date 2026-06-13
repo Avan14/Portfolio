@@ -65,6 +65,7 @@ export interface Project {
   liveUrl: string;
   githubUrl: string;
   imageUrl?: string;
+  imageFallbackText?: string;
 }
 
 export const projects: Project[] = [
@@ -118,6 +119,24 @@ export const projects: Project[] = [
     liveUrl: "",
     githubUrl: "https://github.com/Avan14/CRPTED",
     imageUrl: "/", // Replace with actual image in public folder
+  },
+  {
+    name: "TEXT-TO-SQL",
+    index: "04",
+    label: "ML Pipeline",
+    tagline:
+      "Production-grade natural language to SQL pipeline with schema intelligence and self-correction.",
+    stack: ["Python", "FastAPI", "Streamlit", "OpenAI API", "FAISS"],
+    highlights: [
+      "Built a FastAPI backend with a schema retriever using FAISS for semantic table matching.",
+      "Implemented an AST-based safety validator using sqlglot and an LLM self-correction loop.",
+      "Developed an interactive Streamlit frontend displaying SQL generated, results, and query metrics.",
+      "Integrated observability and tracing to monitor execution accuracy and LLM latency.",
+    ],
+    liveUrl: "",
+    githubUrl: "",
+    imageUrl: "", 
+    imageFallbackText: "TEXT TO SQL\nCONVERSION",
   }
 ];
 
